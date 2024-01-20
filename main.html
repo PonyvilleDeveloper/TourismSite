@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Ярославль Туризм</title>
+  <link rel="stylesheet" href="/resources/css/main.css">
+</head>
+<body>
+  <div class="header-wrapper">
+    <header>
+      <div class="logo">
+        <a href="/main"><p><span class="city">ЯРОСЛАВЛЬ</span><span class="tourism"> ТУРИЗМ</span></p></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/attractions">Достопримечательности</a></li>
+          <li><a href="/museums">Музеи</a></li>
+          <li><a href="/places">Интересные места</a></li>
+          <li><a href="/turs">Туры</a></li>
+        </ul>
+      </nav>
+      <div class="login">
+        <a href="/login">Войти</a>
+      </div>
+    </header>
+  </div>
+
+  <!-- Слайд-шоу -->
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="/resources/img/strelka.jpg" alt="Картинка">
+      <div class="text">Кафедральный собор Успения Пресвятой Богородицы</div>
+    </div>
+    <div class="mySlides fade">
+      <img src="/resources/img/strelka1.jpg" alt="Картинка1">
+      <div class="text">Парк Стрелка</div>
+    </div>
+    <div class="mySlides fade">
+      <img src="/resources/img/strelka2.jpg" alt="Картинка2">
+      <div class="text">Здание управления Северной железной дороги</div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <!-- Добавьте другие изображения с тем же классом 'mySlides' -->
+  </div>
+  <br>
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    <!-- Добавьте другие кружочки для каждого слайда -->
+  </div>
+  <script src="/resources/js/slideshow.js"></script>
+
+  <div class="main-content">
+    <div class="info">
+      <p id="zagolovok"><strong>Ярославль - центр исторического наследия</strong></p>
+      <p>Ярославль — это не только исторический город, но и источник богатого культурного наследия. Он расположен на берегу Волги и является одним из старейших и наиболее культурно значимых городов России. Вот несколько ключевых аспектов, которые делают Ярославль городом культурного наследия:</p>
+      <img src="/resources/img/theater.jpg" alt="Историческое наследие Ярославля">
+      <p>Театр драмы имени Ф. Волкова</p>
+      <ol class="list-style">
+        <li><strong>Архитектурное богатство:</strong> Ярославль славится своей уникальной архитектурой, включая множество деревянных и каменных зданий, которые отражают различные исторические периоды. Он известен своими каменными церквями и монастырями, а также деревянными церквями, которые внесены в список Всемирного наследия ЮНЕСКО.</li> <br />
+        <li><strong>Историческое значение:</strong> Ярославль основан в IX веке и имеет богатое историческое наследие. Это место, где были совершены важные исторические события, и его история тесно связана с формированием российского государства.</li> <br />
+        <li><strong>Художественное наследие:</strong> Город также славится своим художественным наследием. Здесь родились и творили многие известные художники и литераторы, включая Дмитрия Пожарского и Александра Радищева.</li> <br />
+        <li><strong>Музеи и выставки:</strong> Ярославль предлагает богатую культурную жизнь, включая множество музеев и галерей, где можно ознакомиться с историей, искусством и культурой города.</li> <br />
+        <li><strong>Традиции и фольклор:</strong> Город сохраняет свои традиции и фольклор, включая народные песни, танцы и ремесла, которые передаются из поколения в поколение.</li> <br />
+      </ol>
+      <p>Ярославль представляет собой настоящий архив культурного наследия России, и посещение этого города позволит погрузиться в богатую историю и культуру страны.</p>
+    </div>
+  </div>
+  <footer class="footer">Copyright ©2023 Yaroslavl tourism. All rights reserved</footer>
+</body>
+</html>

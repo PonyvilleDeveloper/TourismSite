@@ -1,0 +1,345 @@
+body {
+    background-color: #F0F8FF;
+    margin: 0;
+    padding: 30px; /* Внешние отступы по бокам для всей страницы */
+  }
+  
+  .header-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1920px; /* Ширина контента */
+    position: relative;
+    margin-bottom: 20px; /* Добавьте отступ сверху */
+    
+  }
+
+  header {
+    background-color: rgba(131, 234, 241, 0.2); /* Добавляем фон для шапки */
+    padding: 20px;
+    color: black; /* Цвет текста в шапке */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+  }
+  .logo {
+    left: 20px; /* Выравниваем логотип с небольшим отступом от левого края */
+    display: flex; /* Добавляем гибкость в распределении элементов внутри */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    position: absolute;
+  }
+  .header-wrapper header .logo a {
+    font-size: 24px;
+    text-decoration: none !important; /* Убираем подчеркивание у ссылки */
+    .city {
+      color: #00BFFF; /* Цвет для "Ярославль" */
+    }
+    
+    .tourism {
+      color: #00538A; /* Цвет для "Туризм" */
+    }
+    font-weight: bold; /* Делаем текст жирным */
+    font-family: 'Times New Roman', sans-serif;
+    vertical-align: top; /* Расположение элемента сверху */
+    position: relative; /* Делаем позиционирование элемента относительным */
+    top: -5px; /* Поднимаем элемент вверх на 5 пикселей */
+    margin-left: 15px; /* Добавляем отступ слева */
+  }
+  
+  .header-wrapper header nav ul li a {
+    font-family: 'Inknut Antiqua', serif;
+    font-size: 22px;
+  }
+
+  nav {
+    position: absolute;
+    margin-left: auto; /* Перемещаем навигацию вправо */
+    left: 50%; /* Размещаем навигацию по центру */
+    transform: translateX(-50%); /* Центрируем относительно родительского элемента */
+  }
+  nav ul {
+    
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  nav ul li {
+    margin: 0 10px; /* Отступы между пунктами навигации */ 
+  }
+  
+  nav ul li:first-child {
+    margin-left: 0; /* Убираем левый отступ у первого пункта */
+  }
+  
+  nav ul li:last-child {
+    margin-right: 0; /* Убираем правый отступ у последнего пункта */
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: black; /* Цвет текста в шапке */
+    font-weight: bold; /* Делаем текст жирным */ 
+    position: relative;
+  }
+  
+  nav ul li:not(:last-child) a::after {
+    content: "|";
+    margin-left: 15px; /* Отступ слева от разделителя */
+    margin-right: 5px; /* Отступ справа от разделителя */
+    color: black; /* Цвет разделителя */
+  }
+  .login {
+    position: absolute;
+    margin-right: 40px;
+    right: 20px; /* Размещаем кнопку логина с отступом справа */
+    display: flex; /* Добавляем гибкость в распределении элементов внутри */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    font-family: 'calibri', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .login a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  
+  /* Стили для изображений в слайдере */
+  .mySlides {
+    display: none;
+  }
+
+/* Анимация при смене слайдов */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  .mySlides img {
+    width: auto;
+    height: 800px; /* Установите здесь такую же высоту */
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto; /* Центрирование изображения */
+    display: block;
+  }
+  
+  @keyframes fade {
+  from { opacity: .4 }
+  to { opacity: 1 }
+  }
+  
+  .slideshow-container {
+    position: relative;
+    max-width: 2000px;
+    margin:auto;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute; /* Изменяем на absolute */
+    top: 50%; /* Вы можете настроить точное положение вертикально */
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 3px;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+
+  .prev {
+    left: 60px; /* Укажите желаемое расположение кнопки "назад" */
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .next {
+    right:60px; /* Укажите желаемое расположение кнопки "вперед" */
+    border-radius: 0 3px 3px 0;
+  }
+
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  
+
+  /* Стили кружочков */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  /* Блок с текстом после слайд шоу*/
+  .container {
+    text-align: center; /* Центрирование содержимого по горизонтали */
+    margin-top: 30px;
+    margin-bottom: 50px;
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .text-block {
+    background-color: white;
+    display: inline-block; /* Для центрирования блока по горизонтали */
+    padding-bottom: 30px;
+  }
+
+  .text-block p {
+    padding-left: 200px; /* Отступ слева для абзацев */
+    padding-right: 200px; /* Отступ справа для абзацев */
+    text-align: justify;
+    font-size: 22px;
+  }
+
+  .title-block h2 {
+    font-size: 34px; /* Размер шрифта заголовка */
+    font-weight: bold; /* Полужирный шрифт */
+    /* Другие стили для заголовка */
+  }
+  
+  .text {
+    position: absolute;
+    bottom: 10px; /* Позиционируйте текст относительно нижней части изображения */
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .footer {
+    text-align: center;
+    background-color: #7FC7FF;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 200px;
+    font-family: 'Arial';
+    box-sizing: border-box; /* Учитываем padding в ширине */
+  }
+
+  /* Характеристики блоков */
+  .text-after-slideshow {
+    text-align: center; /* Центрируем текст */
+    padding: 20px;
+  }
+  .text {
+    position: absolute;
+    bottom: 10px; /* Позиционируйте текст относительно нижней части изображения */
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Стили для блоков с фотографиями */
+  .block {
+    background-color: white; /* Цвет фона блока */
+    margin-top: 20px; /* Отступ между блоками */
+    max-width: 1200px; /* Ширина блока - 100% ширины родительского контейнера */
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    position: relative; /* Добавим позиционирование для блока */
+    display: flex;
+  }
+  
+  .block-content {
+    display: flex;
+    position: absolute; /* Позиционируем изображение абсолютно */
+    left: 0; /* Располагаем слева относительно блока */
+    top: 0; /* Располагаем сверху относительно блока */
+    height: 100%; /* Высота по высоте блока */
+    width: 100%; /* Занимает половину ширины блока */
+}
+    
+  .block-image {
+    position: absolute;
+    display: flex;
+    width: 500px; /* Размер изображения */
+    height: 100%; /* Размер изображения */
+    object-fit: cover; /* Обрезка изображения, чтобы занять всю площадь */
+    right: 0;
+    top: 0;
+}
+  
+  .block-image img {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .block-details {
+    width: 50%;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+/* Настройки заголовка */
+  .block-title {
+    text-align: center;
+    font-weight: bold;
+    margin-left: 100px;
+    font-size: 28px; 
+  }
+/* Настройки черной полосы */
+  .block-divider {
+    height: 2px;
+    width: 700px;
+    background-color: #ccc;
+    margin: -5px ;
+  }
+  
+  .block-info {
+    display: flex;
+    justify-content: space-between;
+  }
+  .info-item p:first-child {
+    font-weight: bold;
+    color: #1560BD;
+    
+  }
+  /* настройка текста между полосами */
+  .info-item {
+    margin-left: 25px;
+    width: auto;/* Увеличим высоту строки текста */
+
+  }
+  .info-item p {
+    white-space: nowrap; /* Запретим перенос текста на новую строку */
+    overflow: hidden; /* Скроем текст, выходящий за пределы блока */
+    text-overflow: ellipsis; /* Добавим многоточие для обозначения обрезанного текста */
+    text-align: center;
+}
+  
+  .block-text {
+    margin-top: 20px;
+    font-size: 22px;
+    text-align: justify;
+    width: 697px;
+  }
