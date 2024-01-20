@@ -1,0 +1,287 @@
+body {
+    background-color: #F0F8FF;
+    margin: 0;
+    padding: 30px; /* Внешние отступы по бокам для всей страницы */
+  }
+  
+  .header-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1920px; /* Ширина контента */
+    position: relative;
+    margin-bottom: 20px; /* Добавьте отступ сверху */
+    
+  }
+
+  header {
+    background-color: rgba(131, 234, 241, 0.2); /* Добавляем фон для шапки */
+    padding: 20px;
+    color: black; /* Цвет текста в шапке */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+  }
+  .logo {
+    left: 20px; /* Выравниваем логотип с небольшим отступом от левого края */
+    display: flex; /* Добавляем гибкость в распределении элементов внутри */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    position: absolute;
+  }
+  .header-wrapper header .logo a {
+    font-size: 24px;
+    text-decoration: none !important; /* Убираем подчеркивание у ссылки */
+    .city {
+      color: #00BFFF; /* Цвет для "Ярославль" */
+    }
+    
+    .tourism {
+      color: #00538A; /* Цвет для "Туризм" */
+    }
+    font-weight: bold; /* Делаем текст жирным */
+    font-family: 'Times New Roman', sans-serif;
+    vertical-align: top; /* Расположение элемента сверху */
+    position: relative; /* Делаем позиционирование элемента относительным */
+    top: -5px; /* Поднимаем элемент вверх на 5 пикселей */
+    margin-left: 15px; /* Добавляем отступ слева */
+  }
+  
+  .header-wrapper header nav ul li a {
+    font-family: 'Inknut Antiqua', serif;
+    font-size: 22px;
+  }
+
+  nav {
+    position: absolute;
+    margin-left: auto; /* Перемещаем навигацию вправо */
+    left: 50%; /* Размещаем навигацию по центру */
+    transform: translateX(-50%); /* Центрируем относительно родительского элемента */
+  }
+  nav ul {
+    
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  nav ul li {
+    margin: 0 10px; /* Отступы между пунктами навигации */ 
+  }
+  
+  nav ul li:first-child {
+    margin-left: 0; /* Убираем левый отступ у первого пункта */
+  }
+  
+  nav ul li:last-child {
+    margin-right: 0; /* Убираем правый отступ у последнего пункта */
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: black; /* Цвет текста в шапке */
+    font-weight: bold; /* Делаем текст жирным */ 
+    position: relative;
+  }
+  
+  nav ul li:not(:last-child) a::after {
+    content: "|";
+    margin-left: 15px; /* Отступ слева от разделителя */
+    margin-right: 5px; /* Отступ справа от разделителя */
+    color: black; /* Цвет разделителя */
+  }
+  .login {
+    position: absolute;
+    margin-right: 40px;
+    right: 20px; /* Размещаем кнопку логина с отступом справа */
+    display: flex; /* Добавляем гибкость в распределении элементов внутри */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    font-family: 'calibri', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .login a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  
+  /* Стили для изображений в слайдере */
+  .mySlides {
+    display: none;
+  }
+
+/* Анимация при смене слайдов */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  .mySlides img {
+    width: auto;
+    height: 800px; /* Установите здесь такую же высоту */
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto; /* Центрирование изображения */
+    display: block;
+  }
+  
+  @keyframes fade {
+  from { opacity: .4 }
+  to { opacity: 1 }
+  }
+  
+  .slideshow-container {
+    position: relative;
+    max-width: 2000px;
+    margin:auto;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute; /* Изменяем на absolute */
+    top: 50%; /* Вы можете настроить точное положение вертикально */
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 3px;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+
+  .prev {
+    left: 60px; /* Укажите желаемое расположение кнопки "назад" */
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .next {
+    right:60px; /* Укажите желаемое расположение кнопки "вперед" */
+    border-radius: 0 3px 3px 0;
+  }
+
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  
+
+  /* Стили кружочков */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .text {
+    position: absolute;
+    bottom: 10px; /* Позиционируйте текст относительно нижней части изображения */
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .footer {
+    text-align: center;
+    background-color: #7FC7FF;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 200px;
+    font-family: 'Arial';
+    box-sizing: border-box; /* Учитываем padding в ширине */
+  }
+
+  /* Дальше идет заголовок и сами карточки */
+  h2 {
+    font-family: "Arial", sans-serif;
+    text-align: center;
+    margin-top: 70px;
+    font-size: 34px; /* Размер шрифта заголовка */
+    font-weight: bold;
+  }
+
+  .tour-cards {
+    font-family: "Arial", sans-serif;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    max-width: 2000px;
+  }
+  
+  /* Стили для отдельной карточки */
+  .card {
+    font-family: "Arial", sans-serif;
+    position: relative;
+    width: 600px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 128, 255, 0.2);
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  
+  .card ul {
+    list-style-type: disc; 
+    text-align: left; 
+    padding-left: 50px; 
+    margin-top: 10px;
+    font-size: 21px;
+  }
+  
+  .card ul li {
+    margin-bottom: 12px;
+  }
+
+  /* Стили для черной шапки */
+  .card::before {
+    content: attr(data-title);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px 5px 0 0;
+    font-size: 22px;
+  }
+
+  .card a {
+    position: absolute;
+    bottom: 10px; /* Отступ от нижнего края */
+    right: 10px; /* Отступ от правого края */
+    background-color: #ffffff; /* Цвет фона для ссылки */
+    padding: 5px 10px; /* Поля вокруг текста ссылки */
+    border: 1px solid #000000; /* Граница для ссылки */
+    text-decoration: none; /* Убираем подчеркивание ссылки */
+  }
