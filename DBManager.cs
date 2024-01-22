@@ -68,24 +68,25 @@ namespace Tourism {
 
             return json + string.Join(", \n", data) + "\n]";
         }
-        public string GetComments(int tour_id) {
+        public string GetComments() {
             var json = "[\n";
             List<string> data = new();
             sql.Dispose();
-            sql.CommandText = $"SELECT * FROM Comments WHERE tour = {tour_id};";
+            sql.CommandText = $"SELECT * FROM Comments;";
             var reader = sql.ExecuteReader();
             while(reader.Read()) {
                 data.Add("\t{"
                 + $"\n\t\t\"id\": {reader["id"]},\n" 
                 + $"\n\t\t\"name\": {reader["name"]},\n" 
-                + $"\n\t\t\"tour_id\": {reader["tour"]}\n"
+                + $"\n\t\t\"tour_id\": {reader["tour"]},\n"
                 + $"\n\t\t\"comment\": {reader["comment"]}\n"
                 + "\t}");
             }
             return json + string.Join(", \n", data) + "\n]";
         }
         public bool AddComment(string username, int tour_id, string comment) {
-            sql.CommandText = $"INSERT INTO Comments (name, tour, comment) VALUES ('{username}', '{tour_id}', '{comment}');";
+            sql.Dispose();
+            sql.CommandText = $"INSERT INTO Comments (name, tour, comment) VALUES ('\"{username}\"', '{tour_id}', '\"{comment}\"');";
             return sql.ExecuteNonQuery() > 0;
         }
         public void Dispose() {

@@ -15,7 +15,7 @@ namespace Tourism {
         private static DBManager DataBase;
 
         static ApiImpl() {
-            WorkDir = "F:\\Свят\\Documents\\Programming\\C#\\Tourism\\"; //Assembly.GetExecutingAssembly().Location;
+            WorkDir = AppDomain.CurrentDomain.BaseDirectory;
             logger = new Logger{LogFile = $"{WorkDir}/logs/{DateTime.Today.Day}{DateTime.Today.Month}{DateTime.Today.Year}.log"};
             accessor = new(600);
             DataBase = new($"{WorkDir}/resources/data/DataBase.db");
