@@ -1,0 +1,44 @@
+  .info {
+    background-color: #c2e4e7;
+    padding: 20px;
+    max-width: 1400px; /* Устанавливаем максимальную ширину элемента */
+    margin: 0 auto; /* Центрируем элемент по горизонтали */
+    position: relative;
+    text-align: left;
+    margin-top: 35px;
+    padding-bottom: 90px;  
+    border-radius: 10px;  
+   }
+
+  .info p {
+    font-size: 24px; /* Увеличиваем размер шрифта */
+    line-height: 1.6;
+    margin-bottom: 15px; /* Отступ между абзацами */
+    margin-left: 200px; /* Отступ слева от разделителя */
+    margin-right: 200px; /* Отступ справа от разделителя */
+    text-align: justify;
+    line-height: 28px; /* межстрочный интервал */
+  }
+  #zagolovok {
+    font-size: 30px;
+    text-align: center;
+  }
+  .list-style {
+    font-size: 24px;
+    text-align: justify;
+    margin-left: 200px; /* Отступ слева от разделителя */
+    margin-right: 200px; /* Отступ справа от разделителя */
+    line-height: 23px;
+  }
+
+  .info p strong {
+    font-weight: bold;
+    text-align: center; 
+  }
+  .info img {
+    display: block;
+    margin: 0 auto; /* Центрируем изображение по горизонтали */
+    max-width: 100%; /* Чтобы изображение не выходило за пределы контейнера */
+    height: auto;
+    max-width: 1000px;
+  }

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Ярославль Туризм</title>
+  <link rel="stylesheet" href="/resources/css/common.css">
+  <link rel="stylesheet" href="/resources/css/tour.css">
+  <link rel="stylesheet" href="/resources/css/slideshow.css">
+  <script src="/resources/js/getting.js"></script>
+  <script src="/resources/js/current_tour.js"></script>
+</head>
+<body>
+  <div class="header-wrapper">
+    <header>
+      <div class="logo">
+        <a href="/main"><p><span class="city">ЯРОСЛАВЛЬ</span><span class="tourism"> ТУРИЗМ</span></p></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/attractions">Достопримечательности</a></li>
+          <li><a href="/museums">Музеи</a></li>
+          <li><a href="/places">Интересные места</a></li>
+          <li><a href="/turs">Туры</a></li>
+        </ul>
+      </nav>
+      <div class="login">
+        <a href="/login">Войти</a>
+      </div>
+    </header>
+  </div>
+
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="/resources/img/strelka.jpg" alt="Картинка">
+      <div class="text">Кафедральный собор Успения Пресвятой Богородицы</div>
+    </div>
+    <div class="mySlides fade">
+      <img src="/resources/img/strelka1.jpg" alt="Картинка1">
+      <div class="text">Парк Стрелка</div>
+    </div>
+    <div class="mySlides fade">
+      <img src="/resources/img/strelka2.jpg" alt="Картинка2">
+      <div class="text">Здание управления Северной железной дороги</div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <!-- Добавьте другие изображения с тем же классом 'mySlides' -->
+  </div>
+  <br>
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    <!-- Добавьте другие кружочки для каждого слайда -->
+  </div>
+  <main>
+    
+  </main>  
+
+  <div id="comments">
+    <h3>Комментарии</h3>
+  </div>
+  <div class="comment-section">
+    <h3 id="docomment"></h3>
+    <form action="/comment" method="post">
+      <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br><br>
+      <input type="text" name="name" id="username" hidden>
+      <input type="text" name="tour_id" id="tour_id" hidden>
+
+
+  <div class="comment-section">
+    <h3>Оставьте комментарий</h3>
+    <form action="/comment" method="post">
+      <label for="comment">Комментарий:</label><br>
+      <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br><br>
+ 
+      <input type="submit" value="Отправить">
+    </form>
+  </div>
+
+  <script src="/resources/js/slideshow.js"></script>
+  <footer class="footer">Copyright ©2023 Yaroslavl tourism. All rights reserved</footer>
+</body>
+</html>

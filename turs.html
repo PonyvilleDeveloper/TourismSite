@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Ярославль Туризм</title>
+  <link rel="stylesheet" href="/resources/css/common.css">
+  <link rel="stylesheet" href="/resources/css/slideshow.css">
+  <link rel="stylesheet" href="/resources/css/turs.css">
+</head>
+<body>
+  <div class="header-wrapper">
+    <header>
+      <div class="logo">
+        <a href="/main"><p><span class="city">ЯРОСЛАВЛЬ</span><span class="tourism"> ТУРИЗМ</span></p></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/attractions">Достопримечательности</a></li>
+          <li><a href="/museums">Музеи</a></li>
+          <li><a href="/places">Интересные места</a></li>
+          <li><a href="/turs">Туры</a></li>
+        </ul>
+      </nav>
+      <div class="login">
+        <a href="/login">Войти</a>
+      </div>
+    </header>
+  </div>
+  <!-- Слайд-шоу -->
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="/resources/img/strelka.jpg" alt="Картинка">
+      <div class="text">Кафедральный собор Успения Пресвятой Богородицы</div>
+    </div>
+    <div class="mySlides fade">
+      <img src="/resources/img/strelka1.jpg" alt="Картинка1">
+      <div class="text">Парк Стрелка</div>
+    </div>
+    <div class="mySlides fade">
+      <img src="/resources/img/strelka2.jpg" alt="Картинка2">
+      <div class="text">Здание управления Северной железной дороги</div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <!-- Добавьте другие изображения с тем же классом 'mySlides' -->
+  </div>
+  <br>
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    <!-- Добавьте другие кружочки для каждого слайда -->
+  </div>
+  <script src="/resources/js/slideshow.js"></script>
+  <script src="/resources/js/getting.js"></script>
+  <script src="/resources/js/tours.js"></script>
+
+  <h2>Каталог туров</h2>
+  
+  <div class="tour-cards" id="tours_container">
+    
+  </div>
+
+  <footer class="footer">Copyright ©2023 Yaroslavl tourism. All rights reserved</footer>
+</body>
+</html>

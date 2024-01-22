@@ -1,0 +1,104 @@
+  h3 {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 32px; /* Размер шрифта заголовка */
+    font-weight: bold;
+    margin-top: 40px; /* Отступ сверху */
+  }
+  
+  .text-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+    /* блок с текстом */
+  .text-container {
+    background-color: #ffffff; /* Белый цвет фона */
+    padding: 20px; /* Отступы вокруг текста */
+    margin-top: 40px; /* Отступ сверху */
+    text-align: center; /* Выравнивание текста по центру (по желанию) */
+    width: 1100px; /* Максимальная ширина блока */
+    margin-left: auto; /* Центрирование по горизонтали */
+    margin-right: auto; /* Центрирование по горизонтали */
+    border-radius: 10px;
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 28px; /* Размер шрифта заголовка */
+    font-weight: bold;
+  }
+  .text-container p {
+    font-size: 18px; /* Размер текста */
+    line-height: 1.6; /* Межстрочный интервал */
+    color: #333; /* Цвет текста */
+    margin: 10px 0; /* Отступы сверху и снизу */
+    text-align: justify;
+    padding-left: 100px; /* Отступ слева */
+    padding-right: 100px; /* Отступ справа */
+    margin-top: 20px;
+  }
+
+
+  .comment {
+    background-color: whitesmoke;
+    font-size: 20px;
+    border-radius: 5px;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  /* Стили для формы комментариев */
+  .comment-section {
+    display: none;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    background-color: rgba(0, 128, 255, 0.1);
+
+    overflow: hidden;
+  }
+  
+  .comment-section h3 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .comment-section label {
+    font-weight: bold;
+  }
+  
+  .comment-section textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    float: left;
+  }
+  
+  .comment-section input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4285B4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  .comment-section input[type="submit"]:hover {
+    background-color: #4285B4;
+  }
+
+  .comment-section {
+    margin-top: 200px; 
+  }
+  

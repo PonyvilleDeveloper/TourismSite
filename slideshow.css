@@ -1,0 +1,90 @@
+
+  /* Стили для изображений в слайдере */
+  .mySlides {
+    display: none;
+  }
+
+/* Анимация при смене слайдов */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  .mySlides img {
+    width: auto;
+    height: 800px; /* Установите здесь такую же высоту */
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto; /* Центрирование изображения */
+    display: block;
+  }
+  
+  @keyframes fade {
+    from { opacity: .4 }
+    to { opacity: 1 }
+  }
+  
+  .slideshow-container {
+    position: relative;
+    max-width: 2000px;
+    margin:auto;
+    overflow: hidden;
+    text-align: center;  
+    border-radius: 10px;  
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute; /* Изменяем на absolute */
+    top: 50%; /* Вы можете настроить точное положение вертикально */
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 3px;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+
+  .prev {
+    left: 60px; /* Укажите желаемое расположение кнопки "назад" */
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .next {
+    right:60px; /* Укажите желаемое расположение кнопки "вперед" */
+    border-radius: 0 3px 3px 0;
+  }
+
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  /* Текст на слайд шоу */
+  .text {
+    position: absolute;
+    bottom: 10px; /* Позиционируйте текст относительно нижней части изображения */
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Стили кружочков */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }

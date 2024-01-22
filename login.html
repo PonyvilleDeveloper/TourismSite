@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Страница Входа</title>
+        <link rel="stylesheet" href="resources/css/login.css"> 
+    </head>
+    <body>
+        <h2>Пожалуйста, войдите или зарегистрируйтесь</h2>
+        <div class="container" id="container">
+            <div class="form-container sign-up-container">
+                <form action="/register" method="post">
+                    <h1>Создание аккаунта</h1>
+                    <input type="text" placeholder="Имя" name="name"/>
+                    <input type="email" placeholder="Email(Логин)" name="login"/>
+                    <input type="password" placeholder="Пароль" name="password"/>
+                    <input type="submit" value="Создать" class="sender"/>
+                </form>
+            </div>
+            <div class="form-container sign-in-container">
+                <a href="/main" onclick="history.back();" class="back-link">&#8592; На главную</a>
+                <form action="/auth" method="post">
+                    <h1>Войдите</h1>
+                    <input type="email" placeholder="Email(Логин)" name="login" id="login_enter"/>
+                    <input type="password" placeholder="Пароль" name="password"/>
+                    <a href="/reset_password">Забыли свой пароль?</a>
+
+                    <input type="submit" value="Войти" class="sender" onclick="getusername()"/>
+
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1>С возвращением!</h1>
+                        <p>Чтобы поддерживать с нами связь, пожалуйста, войдите в систему</p>
+                        <button class="ghost" id="signIn">Войти</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1>Привет, друг!</h1>
+                        <p>Введи свои личные данные и начни путешествие вместе с нами</p>
+                        <button class="ghost" id="signUp">Зарегистрироваться</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="resources/js/login.js"></script>
+    </body>
+</html>

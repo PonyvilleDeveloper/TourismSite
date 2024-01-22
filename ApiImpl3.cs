@@ -21,6 +21,7 @@ partial class ApiImpl {
         res.Close();
     }
     public static void Comments(HttpListenerRequest req, HttpListenerResponse res) {
+
         var data = Encoding.UTF8.GetBytes(DataBase.GetComments());
         res.ContentLength64 = data.Length;
         res.ContentType = "text/json";
@@ -29,6 +30,7 @@ partial class ApiImpl {
     }
     public static void AddComment(HttpListenerRequest req, HttpListenerResponse res) {
         var data = req.ParseForm();
+
         logger.Debug("COMMENT", data["name"], data["tour_id"], data["comment"]);
         if(DataBase.AddComment(data["name"], Convert.ToInt32(data["tour_id"]), data["comment"])) {
             res.StatusCode = 200;
