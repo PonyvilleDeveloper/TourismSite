@@ -28,3 +28,18 @@ async function getusername() {
         console.error('Произошла проблема с операцией fetch: ', error);
     }
 }
+async function getusername_r() {
+    try {
+        const response = await fetch('/username?login=' + document.getElementById("login_enter").value, {
+            credentials: 'include' // Добавление куки к запросу
+        });
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.text(); // Используйте .text() для получения тела ответа как строки
+        // Запись данных в SessionStorage
+        sessionStorage.setItem('username', data);
+    } catch (error) {
+        console.error('Произошла проблема с операцией fetch: ', error);
+    }
+}
