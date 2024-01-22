@@ -15,7 +15,7 @@ namespace Tourism {
         private static DBManager DataBase;
 
         static ApiImpl() {
-            WorkDir = "F:\\Свят\\Documents\\Programming\\C#\\Tourism\\"; //Assembly.GetExecutingAssembly().Location;
+            WorkDir = AppDomain.CurrentDomain.BaseDirectory;
             logger = new Logger{LogFile = $"{WorkDir}/logs/{DateTime.Today.Day}{DateTime.Today.Month}{DateTime.Today.Year}.log"};
             accessor = new(600);
             DataBase = new($"{WorkDir}/resources/data/DataBase.db");
@@ -50,13 +50,14 @@ Comments: {server.Comments}
             res.ResponseText(result);
         }
         public static void Page(HttpListenerRequest req, HttpListenerResponse res) {
-            if (!Exists($"{WorkDir}resources/pages{req.RawUrl}.html")) {
-                logger.Error("API-Page", $"Non-existed or not founded page requested {req.RawUrl}");
+            var page = req.Url.LocalPath;
+            if (!Exists($"{WorkDir}resources/pages{page}.html")) {
+                logger.Error("API-Page", $"Non-existed or not founded page requested {page}");
                 res.ResponseError(404, "Non-existed or not founded page requested");
                 return;
             }
             logger.Info("API-Page", "Page requested " + req.RawUrl);
-            res.ResponseFile($"{WorkDir}resources/pages{req.RawUrl}.html");
+            res.ResponseFile($"{WorkDir}resources/pages{page}.html");
         }
     }
 }
