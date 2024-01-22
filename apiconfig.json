@@ -12,15 +12,45 @@
         "Method": "GET"
     },
     {
-        "Name": "Page",
-        "Url": "\\w+",
-        "AuthRequired": false,
-        "Method": "GET"
-    },
-    {
         "Name": "Auth",
         "Url": "auth",
         "AuthRequired": false,
         "Method": "POST"
+    },
+    {
+        "Name": "Register",
+        "Url": "register",
+        "AuthRequired": false,
+        "Method": "POST"
+    },
+    {
+        "Name": "Places",
+        "Url": "getplaces",
+        "AuthRequired": false,
+        "Method": "GET"
+    },
+    {
+        "Name": "Tours",
+        "Url": "gettours",
+        "AuthRequired": false,
+        "Method": "GET"
+    },
+    {
+        "Name": "Comments",
+        "Url": "getcomments",
+        "AuthRequired": false,
+        "Method": "GET"
+    },
+    {
+        "Name": "AddComment",
+        "Url": "comment",
+        "AuthRequired": false,
+        "Method": "POST"
+    },
+    {
+        "Name": "Page",
+        "Url": "\\w+\\??(\\w+=\\d+)?",
+        "AuthRequired": false,
+        "Method": "GET"
     }
 ]
