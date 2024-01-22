@@ -56,6 +56,7 @@
   <main>
     
   </main>  
+
   <div id="comments">
     <h3>Комментарии</h3>
   </div>
@@ -65,6 +66,14 @@
       <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br><br>
       <input type="text" name="name" id="username" hidden>
       <input type="text" name="tour_id" id="tour_id" hidden>
+
+
+  <div class="comment-section">
+    <h3>Оставьте комментарий</h3>
+    <form action="/comment" method="post">
+      <label for="comment">Комментарий:</label><br>
+      <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br><br>
+ 
       <input type="submit" value="Отправить">
     </form>
   </div>
