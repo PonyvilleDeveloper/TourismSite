@@ -21,10 +21,12 @@
                 <a href="/main" onclick="history.back();" class="back-link">&#8592; На главную</a>
                 <form action="/auth" method="post">
                     <h1>Войдите</h1>
-                    <input type="email" placeholder="Email(Логин)" name="login"/>
+                    <input type="email" placeholder="Email(Логин)" name="login" id="login_enter"/>
                     <input type="password" placeholder="Пароль" name="password"/>
                     <a href="/reset_password">Забыли свой пароль?</a>
-                    <input type="submit" value="Войти" class="sender" onclick="alert('test')"/>
+
+                    <input type="submit" value="Войти" class="sender" onclick="getusername()"/>
+
                 </form>
             </div>
             <div class="overlay-container">

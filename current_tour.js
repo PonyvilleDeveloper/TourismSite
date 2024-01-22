@@ -32,9 +32,37 @@ async function build() {
     });
     
     page.appendChild(container);
+
+    var COMMENTS = await getJsonFromUrl("/getcomments");
+    console.log(COMMENTS);
+    COMMENTS = COMMENTS.filter(function(c) {
+        return c.tour_id == id;
+    });
+    var comments = document.getElementById("comments");
+    COMMENTS.forEach(c => {
+        var div = document.createElement("div");
+        div.className = "comment";
+        div.style.display = "flex";
+        div.style.alignItems = "center";
+        var h4 = document.createElement("h4");
+        h4.textContent = c.name;
+        h4.style.padding = "5px";
+        h4.style.margin = "5px";
+        h4.style.border ="1px solid black";
+        h4.style.borderRadius = "3px";
+        div.appendChild(h4);
+        var p = document.createElement("p");
+        p.textContent = c.comment;
+        p.style.fontStyle = "italic";
+        div.appendChild(p);
+        comments.appendChild(div);
+    });
     
     if(document.cookie != "") {
         document.getElementsByClassName("comment-section")[0].style.display ="block";
+        document.getElementById("docomment").textContent = `${sessionStorage.getItem("username")}, оставьте комментарий:`;
+        document.getElementById("username").value = sessionStorage.getItem("username");
+        document.getElementById("tour_id").value = id;
     }
 }
 
