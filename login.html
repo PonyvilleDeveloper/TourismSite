@@ -12,7 +12,7 @@
                 <form action="/register" method="post">
                     <h1>Создание аккаунта</h1>
                     <input type="text" placeholder="Имя" name="name"/>
-                    <input type="email" placeholder="Email" name="email"/>
+                    <input type="email" placeholder="Email(Логин)" name="login"/>
                     <input type="password" placeholder="Пароль" name="password"/>
                     <input type="submit" value="Создать" class="sender"/>
                 </form>
@@ -24,7 +24,7 @@
                     <input type="email" placeholder="Email(Логин)" name="login"/>
                     <input type="password" placeholder="Пароль" name="password"/>
                     <a href="/reset_password">Забыли свой пароль?</a>
-                    <input type="submit" value="Войти" class="sender"/>
+                    <input type="submit" value="Войти" class="sender" onclick="alert('test')"/>
                 </form>
             </div>
             <div class="overlay-container">

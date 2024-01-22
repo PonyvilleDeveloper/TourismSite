@@ -1,0 +1,119 @@
+body {
+    background: linear-gradient(to right, #63A4FF, #2f9cf5);
+    margin: 0;
+    font-family: 'Consolas';
+    padding: 30px; /* Внешние отступы по бокам для всей страницы */
+  }
+  
+.header-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1920px; /* Ширина контента */
+    position: relative;
+    margin-bottom: 20px; /* Добавьте отступ сверху */
+    
+  }
+
+  header {
+    background-color: #a7f0fa; /* Добавляем фон для шапки */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    position: relative;  
+    border-radius: 10px;  
+  }
+  .logo {
+    align-items: center;
+    display: flex;
+    margin-top: 7px;
+  }
+  .header-wrapper header .logo a {
+    font-size: 24px;
+    text-decoration: none !important; /* Убираем подчеркивание у ссылки */
+    .city {
+      color: #00BFFF; /* Цвет для "Ярославль" */
+    }
+    
+    .tourism {
+      color: #00538A; /* Цвет для "Туризм" */
+    }
+
+    font-weight: bold; /* Делаем текст жирным */
+    vertical-align: top; /* Расположение элемента сверху */
+    position: relative; /* Делаем позиционирование элемента относительным */
+    top: -5px; /* Поднимаем элемент вверх на 5 пикселей */
+    margin-left: 15px; /* Добавляем отступ слева */
+    width: fit-content;
+  }
+  
+  .header-wrapper header nav ul li a {
+    font-size: 22px;
+  }
+
+  nav {
+    display: inline-block;
+  }
+  nav ul {    
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+    padding: 5px;
+    transition: all 0.5s ease;
+    border-radius: 5px;
+  }
+  
+  nav ul li:hover {
+    background-color: #489faa67; 
+  }
+  
+  nav ul li:first-child {
+    margin-left: 0; /* Убираем левый отступ у первого пункта */
+  }
+  
+  nav ul li:last-child {
+    margin-right: 0; /* Убираем правый отступ у последнего пункта */
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    font-weight: bold; /* Делаем текст жирным */ 
+    position: relative;
+    color: black;
+    transition: color 0.5s ease;
+  }
+  nav ul li a:hover {
+    color: aliceblue;
+  }
+
+  .login {
+    display: inline-block;
+    margin-right: 40px;
+    right: 20px; /* Размещаем кнопку логина с отступом справа */
+    display: flex; /* Добавляем гибкость в распределении элементов внутри */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .login a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .footer {
+    text-align: center;
+    background-color: #a7f0fa;
+    color: gray;
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 200px;
+    box-sizing: border-box; /* Учитываем padding в ширине */  
+    border-radius: 10px;  
+  }
