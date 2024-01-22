@@ -43,7 +43,6 @@
     margin-top: 20px;
   }
 
-
   .comment {
     background-color: whitesmoke;
     font-size: 20px;
@@ -60,9 +59,7 @@
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-
     background-color: rgba(0, 128, 255, 0.1);
-
     overflow: hidden;
   }
   
