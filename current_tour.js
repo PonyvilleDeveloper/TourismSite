@@ -60,7 +60,9 @@ async function build() {
     
     if(document.cookie != "") {
         document.getElementsByClassName("comment-section")[0].style.display ="block";
-        document.getElementById("showname").textContent = `${sessionStorage.getItem("username")}, оставьте комментарий:`;
+        document.getElementById("docomment").textContent = `${sessionStorage.getItem("username")}, оставьте комментарий:`;
+        document.getElementById("username").value = sessionStorage.getItem("username");
+        document.getElementById("tour_id").value = id;
     }
 }
 

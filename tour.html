@@ -60,10 +60,11 @@
     <h3>Комментарии</h3>
   </div>
   <div class="comment-section">
-    <h3 id="showname"></h3>
+    <h3 id="docomment"></h3>
     <form action="/comment" method="post">
       <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br><br>
-  
+      <input type="text" name="name" id="username" hidden>
+      <input type="text" name="tour_id" id="tour_id" hidden>
       <input type="submit" value="Отправить">
     </form>
   </div>
